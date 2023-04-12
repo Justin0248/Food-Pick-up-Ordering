@@ -21,10 +21,8 @@ const getUserWithPassword = (password) => {
   });
 };
 
-const addItemsToOrder = (order, item) => {
-  // assuming the order is an array
-  order.push(item);
-  return order;
+const addItemsToOrder = (item) => {
+  return db.query('INSERT INTO orders (items) VALUES ($1);')
 };
 const calculateTotalPrice = (order) => {
 
