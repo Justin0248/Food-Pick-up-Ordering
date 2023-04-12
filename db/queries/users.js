@@ -24,11 +24,16 @@ const getUserWithPassword = (password) => {
 const addItemsToOrder = (user_id, item) => {
   return db.query('INSERT INTO orders (items) VALUES ($1, $2);', [user_id, item])
 };
-const calculateTotalPrice = (order) => {
 
+const calculateTotalPrice = (item) => {
+  return db.query('SELECT SUM(price) FROM menu WHERE name = $1;', [item])
+  .then(data => {
+    return data.rows;
+  });
 };
+
 const acceptOrderAndGiveTime = () => {
 
 };
 
-module.exports = { getUsers, getUserWithEmail, getUserWithPassword, addItemsToOrder };
+module.exports = { getUsers, getUserWithEmail, getUserWithPassword, addItemsToOrder, calculateTotalPrice };
