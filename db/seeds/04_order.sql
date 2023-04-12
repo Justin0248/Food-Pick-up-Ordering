@@ -1,0 +1,1 @@
+INSERT INTO orders (items) VALUES ('{"Burger", "Fries", "2L pop"}');
