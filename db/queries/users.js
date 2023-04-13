@@ -54,5 +54,5 @@ const acceptOrderAndGiveTime = () => {
 
 };
 
-module.exports = { getUsers, getUserWithEmail, getUserWithPassword, addItemsToOrder, removeItemsFromOrder, calculateTotalPrice };
+
 module.exports = { getUsers, getUserWithEmail, getUserWithPassword, addItemsToOrder, calculateTotalPrice, removeItemFromOrder };
