@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/menu-page.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -22,12 +23,15 @@
 <body>
 
   <main>
+   <div class="wrapper">
     <div class="user">
-      <img>
+      <div class="user__avatar"></div>
+
       <h2>Hi, user.name</h2>
       <p>user.phone</p>
       <p>user.address</p>
     </div>
+    <div>
     <h1>What is on your mind today?</h1>
     <div>
       <button class="filter-button" data-filter="all">All</button>
@@ -43,6 +47,8 @@
       </ul>
       <script src="menu-render.js"></script>
     </div>
+  </div>
+  </div>
 
   </main>
 </body>
