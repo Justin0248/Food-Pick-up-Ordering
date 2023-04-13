@@ -12,25 +12,37 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/login.css" />
+  <link rel="stylesheet" href="/styles/helpers.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&family=Noto+Sans:wght@200;300;400&display=swap" rel="stylesheet">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
 </head>
 
 <body>
-  <main style="margin: 1em;">
-    <h3>WELCOME TO OUR RESTAURANT</h3>
-    <h4>Please, log in</h4>
-    <form action="/login" method="POST">
-      <div class="form-group mb-2">
-        <label for="email">Email</label>
-        <input class="form-control mb-3" type="email" name="email" placeholder="Enter email" style="width: 300px">
-        <label for="password">Password</label>
-        <input class="form-control mb-3" type="password" name="password" placeholder="Enter password" style="width: 300px">
-        <button type="submit" class="btn btn-light">Login</button>
+  <div id="my-background"></div>
+  <main>
+    <div class="centered-container">
+    <h3 class="greeting">Welcome To Our Restaurant</h3>
+      <form class="input-form">
+        <span class="text-center">Please, log in</span>
+      <div class="input-container">
+        <input type="email" required=""/>
+        <label>Email</label>
       </div>
+      <div class="input-container">
+        <input type="password" required=""/>
+        <label>Password</label>
+      </div>
+        <button type="button" class="btn-submit">Submit</button>
     </form>
+      </div>
+
+  </div>
   </main>
 </body>
 
