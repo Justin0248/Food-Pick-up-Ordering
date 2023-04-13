@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home Page</title>
+  <title>Login Page</title>
 
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -12,13 +12,26 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
 </head>
 
 <body>
-  <h1>Have fun! 🥔</h1>
+  <main style="margin: 1em;">
+    <h3>WELCOME TO OUR RESTAURANT</h3>
+    <h4>Please, log in</h4>
+    <form action="/login" method="POST">
+      <div class="form-group mb-2">
+        <label for="email">Email</label>
+        <input class="form-control mb-3" type="email" name="email" placeholder="Enter email" style="width: 300px">
+        <label for="password">Password</label>
+        <input class="form-control mb-3" type="password" name="password" placeholder="Enter password" style="width: 300px">
+        <button type="submit" class="btn btn-light">Login</button>
+      </div>
+    </form>
+  </main>
 </body>
 
 </html>
