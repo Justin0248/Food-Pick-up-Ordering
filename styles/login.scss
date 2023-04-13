@@ -12,7 +12,7 @@
 
 .centered-container {
   width: 550px;
-  height: 550px;
+  height: 450px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5); /* 50% dark background */
   position: absolute;
@@ -66,5 +66,21 @@
 .input-container input:valid ~ label{
 	top:-12px;
 	font-size:12px;
+}
 
+.btn-submit {
+  background-color: #bda670; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: #dcc797;
+
+  }
 }
