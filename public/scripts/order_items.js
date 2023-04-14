@@ -1,11 +1,23 @@
 $(document).ready(function() {
 const order = [];
-let total;
-const add = document.getElementsByClassName('add');
-$('.add').on('click', () => {
-    let item = button.id;
+let total = 0;
+const prices = {
+    "fries": 3,
+    "chicken nuggets": 6,
+    "burger combo": 12,
+    "chicken nuggets combo": 9,
+    "coke": 2,
+    "sprite": 2
+  };
+  
+  function addItemToOrder(event) {
+    event.preventDefault(); 
+    let item = event.target.id;
     order.push(item);
-
-})
+    total += prices[item];
+  }
+  
+  $('.add').on('click', addItemToOrder);
 });
-//IMPLEMENT FUNCTION T0 DISPLAY LIST OF ORDERED ITEMS
+
+module.exports = { addItemToOrder };

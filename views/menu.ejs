@@ -20,9 +20,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
   <!-- <link rel="stylesheet" href="/styles/header.css" type="text/css" /> -->
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="/scripts/order_items.js"></script>
   <script type="text/javascript" src="/scripts/amount.js"></script>
+  
 </head>
 
 <body class="page-body">
@@ -38,25 +39,25 @@
       <script src="menu-render.js"></script>
     </div>
     </div>
-
+<button type="submit" id="checkout">checkout</button>
     <div class="menu">
       <h2>Menu</h2>
-      <article action="/users/menu" method="POST">
+      <article>
   
         <h3>Appetizers</h3>
         <div class="appetizers">
-        <label for="fries">fries <button type="submit" class="add" id="fries">Add</button></label>
-        <label for="nuggets">chicken nuggets <button type="submit" class="add" id="chicken-nuggets">Add</button></label>
+        <label for="fries">fries <button type="submit" class="add" id="fries">add</button></label>
+        <label for="nuggets">chicken nuggets <button class="add" id="chicken nuggets">add</button></label>
       </div>
         <h3>Meals</h3>
         <div class="meals">
-        <label for="burger">burger combo <button type="submit" class="add" id="burgerC">Add</button></label>
-        <label for="nuggets">chicken nuggets combo <button type="submit" class="add" id="chickenC">Add</button></label>
+        <label for="burger">burger combo <button class="add" id="burger combo">add</button></label>
+        <label for="nuggets">chicken nuggets combo <button class="add" id="chicken nuggets combo">add</button></label>
       </div>
         <h3>Drinks</h3>
         <div class="drinks">
-        <label for="fries">coke <button type="submit" class="add" id="coke">Add</button></label>
-        <label for="nuggets">sprite <button type="submit" class="add" id="sprite">Add</button></label>
+        <label for="fries">coke <button  class="add" id="coke">add</button></label>
+        <label for="nuggets">sprite <button  class="add" id="sprite">add</button></label>
       </div>
       </article>
       <script src="menu-render.js"></script>

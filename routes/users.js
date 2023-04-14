@@ -8,9 +8,9 @@ const {
   getUsers, 
   getUserWithEmail, 
   getUserWithPassword, 
-  addItemsToOrder, 
   calculateTotalPrice, 
   removeItemFromOrder } = require('../db/queries/users.js')
+ const { addItemToOrder } = require('../public/scripts/order_items.js')
 
 const express = require('express');
 const router  = express.Router();
