@@ -38,16 +38,13 @@ router.post('/login',(req, res) => {
     })
   }
  })
-<<<<<<< HEAD
 })
 router.post('/home', (res, req) => {
   
 })
 
 
-=======
-});
->>>>>>> 0ab7f5f7459d990989da400b6a774f1dfd3ee4b7
+
 
 router.get('/home', (req, res) => {
   const name = user.name;
