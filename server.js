@@ -5,9 +5,6 @@ require('dotenv').config();
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
-const accountSid = "ACf41b276b7ac4b193b6f865325dfc7b97";
-const authToken = '1507dfc261b5dbe0acbc57306755f119';
-const client = require("twilio")(accountSid, authToken);
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -34,13 +31,16 @@ app.use(express.static('public'));
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-
+const twilioRoute = require('./routes/twilioPosts');
+const twilioOrder = require('./routes/order');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', userApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
+app.post('/checkout', twilioRoute);
+app.post('/order', twilioOrder);
 // Note: mount other resources here, using the same pattern above
 
 // Home page
@@ -67,22 +67,4 @@ app.get('/checkout', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
-});
-
-app.post('/checkout', (req, res) => {
-  client.messages
-  .create({ body: "You have an order!", from: "+14344784631", to: "+16047220944" })
-    .then(message => console.log(message.sid));
-  res.redirect('/thanks');
-
-
-});
-
-app.post('/order', (req, res) => {
-  client.messages
-  .create({ body: "Your order will be ready in 20 minutes!", from: "+14344784631", to: "+16047220944" })
-    .then(message => console.log(message.sid));
-  
-
-
 });
