@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/restaurant-page.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
   <script src="/vendor/jquery-3.0.0.js"></script>
 
 </head>
@@ -35,7 +34,8 @@
           </tr>
         </thead>
         <h3>Please specify how long to complete the order</h3>
-        <h4>(Please keep the service time below 20 minutes to maintain your restaurant rating)</h4>>
+        <h4>(Please keep the service time below 20 minutes to maintain your restaurant rating)</h4>
+        <div class="time-select">
         <select name="time">
           <option value="0">Select time:</option>
           <option value="10">10 minutes</option>
@@ -44,7 +44,7 @@
           <option value="16">25 minutes</option>
           <option value="18">30 minutes</option>
           <option value="20">40 minutes</option>
-        </select>
+        </select></div>
       </div>
       <div class="receipt">
         <div class="total subtotals">
