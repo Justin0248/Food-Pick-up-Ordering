@@ -38,6 +38,11 @@ router.post('/login',(req, res) => {
   }
  })
 })
+router.post('/home', (res, req) => {
+  
+})
+
+
 
 router.get('/home', (req, res) => {
   const name = user.name;
@@ -56,12 +61,16 @@ res.render('index')
 });
 
 router.get('/order',(req, res) => {
-  
   res.render('thanks')
   });
 
   router.get('/rest',(req, res) => {
     res.render('restaurant')
     });
+
+    router.get('/checkout',(req, res) => {
+      res.render('checkout')
+      });
+  
 
 module.exports = router;
