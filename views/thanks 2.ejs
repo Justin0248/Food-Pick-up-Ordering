@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/restaurant-page.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
 
-  <body
-    class="page-body">
-  <div id="my-background"></div>
-  <div id="restaurant-page">
+  <body>
+    <%- include('partials/_header') %>
     <div class="wrapper">
           <h1 class="thank">Thank you!</h1>
           <p>Your order has been completed!</p>
@@ -33,7 +30,5 @@
         </div>
     </div>
     </div>
-  </div>
-</div>
   </body>
 </html>

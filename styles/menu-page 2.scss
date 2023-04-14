@@ -1,0 +1,25 @@
+#my-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/img/restaurant.jpeg");
+  background-size: cover;
+}
+
+#menu-page {
+  min-height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 960px;
+  padding: 90px 120px 120px;
+  opacity: 1;
+}
+
+
+.main-page__greeting {
+  font-family: 'Domine', serif;
+  font-size: 70px;
+}

@@ -46,3 +46,12 @@
   align-items: end;
   flex-direction: row;
 }
+
+.menu {
+  min-height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 960px;
+  padding: 90px 120px 120px;
+  opacity: 1;
+}
