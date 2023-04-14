@@ -10,11 +10,13 @@ const {
   getUserWithPassword, 
   calculateTotalPrice, 
   removeItemFromOrder } = require('../db/queries/users.js')
- const { addItemToOrder } = require('../public/scripts/order_items.js')
+
+
 
 const express = require('express');
 const router  = express.Router();
-
+const cookieParser = require('cookie-parser');
+router.use(cookieParser());
 
 let user;
 
@@ -24,7 +26,9 @@ router.post('/login',(req, res) => {
  getUserWithEmail(email).then(verifyEmail => {
   if (verifyEmail.email === email) {
     getUserWithPassword(password).then(verifyPassword => {
-      if (verifyPassword.password === password) {
+      if (verifyPassword.password === password)
+       {
+        res.cookie('email', email);
         res.redirect('/users/home')
         getUsers(email).then(info => {
           user = info;
@@ -39,14 +43,10 @@ router.post('/login',(req, res) => {
   }
  })
 })
-router.post('/home', (res, req) => {
-  
-})
-
-
 
 
 router.get('/home', (req, res) => {
+  const email = req.cookies.email;
   const name = user.name;
   const phone = user.phone;
   const address = user.street_address;
@@ -70,9 +70,6 @@ router.get('/order',(req, res) => {
     res.render('restaurant')
     });
 
-    router.get('/checkout',(req, res) => {
-      res.render('checkout')
-      });
-  
+
 
 module.exports = router;
