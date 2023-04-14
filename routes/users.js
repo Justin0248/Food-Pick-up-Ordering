@@ -33,6 +33,7 @@ router.post('/login',(req, res) => {
       }  
       else {
         res.status(403).send('Error, wrong information provided');
+        return;
       }
     })
   }
@@ -56,9 +57,12 @@ res.render('index')
 });
 
 router.get('/order',(req, res) => {
+  
   res.render('thanks')
   });
 
-
+  router.get('/rest',(req, res) => {
+    res.render('restaurant')
+    });
 
 module.exports = router;
