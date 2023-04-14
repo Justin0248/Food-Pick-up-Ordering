@@ -8,3 +8,4 @@ $('.add').on('click', () => {
 
 })
 });
+//IMPLEMENT FUNCTION T0 DISPLAY LIST OF ORDERED ITEMS
