@@ -15,6 +15,8 @@ const {
 const express = require('express');
 const router  = express.Router();
 
+let user;
+
 router.post('/login',(req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -23,6 +25,10 @@ router.post('/login',(req, res) => {
     getUserWithPassword(password).then(verifyPassword => {
       if (verifyPassword.password === password) {
         res.redirect('/users/home')
+        getUsers(email).then(info => {
+          user = info;
+          return;
+        });
       }  
       else {
         res.status(403).send('Error, wrong information provided');
@@ -33,7 +39,15 @@ router.post('/login',(req, res) => {
 })
 
 router.get('/home', (req, res) => {
-  res.render('menu');
+  const name = user.name;
+  const phone = user.phone;
+  const address = user.street_address;
+  const templatevars = {
+    name,
+    phone,
+    address,
+  }
+  res.render('menu', templatevars);
 }); 
 
 router.get('/login',(req, res) => {
