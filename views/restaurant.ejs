@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/restaurant-page.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
 
 </head>
 
-<body>
-
-
-
+<body class="page-body">
+  <div id="my-background"></div>
+  <div id="restaurant-page">
     <form action="/order" class="placeorder" method="post">
       <h1>You Have Received A New Order For</hi>
       <hi>user.name</h1>
@@ -27,9 +27,6 @@
         <thead>
           <tr class="table">
             <td>
-              <h2>Quantity</h2>
-            </td>
-            <td>
               <h2>Food Items</h2>
             </td>
             <td>
@@ -37,17 +34,16 @@
             </td>
           </tr>
         </thead>
-      <div class="note">
         <h3>Please specify how long to complete the order</h3>
         <h4>(Please keep the service time below 20 minutes to maintain your restaurant rating)</h4>>
         <select name="time">
           <option value="0">Select time:</option>
           <option value="10">10 minutes</option>
-          <option value="12">12 minutes</option>
-          <option value="14">14 minutes</option>
-          <option value="16">16 minutes</option>
-          <option value="18">18 minutes</option>
-          <option value="20">20 minutes</option>
+          <option value="12">15 minutes</option>
+          <option value="14">20 minutes</option>
+          <option value="16">25 minutes</option>
+          <option value="18">30 minutes</option>
+          <option value="20">40 minutes</option>
         </select>
       </div>
       <div class="receipt">
@@ -66,6 +62,7 @@
       </div>
       <button class="confirm" type="submit">Confirm Order</button>
     </form>
+  </div>
   </body>
 
 

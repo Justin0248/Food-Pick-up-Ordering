@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/menu-page.css" />
+  <link rel="stylesheet" href="/styles/helpers.css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -20,9 +22,17 @@
   <script type="text/javascript" src="/scripts/amount.js"></script>
 </head>
 
-<body>
-
+<body class="page-body">
+  <div id="my-background"></div>
+  <div id="menu-page">
   <main>
+    <h1 class="main-page__greeting">Hi,
+      <br>What is on your mind today?</h1>
+    <section class="menu-list">
+      <h2 class="visually-hidden">Menu list</h2>
+    </section>
+      <script src="menu-render.js"></script>
+<---
    <div class="wrapper">
     <div class="user">
       <div class="user__avatar"></div>
@@ -30,27 +40,13 @@
       <h2>Hey, <%= name %></h2>
       <p><%= phone %></p>
       <p><%= address %></p>
+--->
     </div>
-    <div>
-    <h1>What is on your mind today?</h1>
-    <div>
-      <button class="filter-button" data-filter="all">All</button>
-      <button class="filter-button" data-filter="appetizers">Appetizers</button>
-      <button class="filter-button" data-filter="meals">Meals</button>
-      <button class="filter-button" data-filter="drinks">Drinks</button>
-      <button class="filter-button" data-filter="deals">Deals</button>
     </div>
-
-    <div class="menu">
-      <h1>Menu</h1>
-      <ul id="menu-list">
-      </ul>
-      <script src="menu-render.js"></script>
     </div>
-  </div>
-  </div>
 
   </main>
+  </div>
 </body>
 
 
