@@ -1,23 +1,23 @@
 const db = require('../connection');
 
-const getUsers = () => {
-  return db.query('SELECT * FROM users;')
+const getUsers = (email) => {
+  return db.query('SELECT * FROM users WHERE email = $1;', [email])
     .then(data => {
-      return data.rows;
+      return data.rows[0];
     });
 };
 
 const getUserWithEmail = (email) => {
-  return db.query('SELECT * FROM users WHERE users.email = $1;', [email])
+  return db.query('SELECT * FROM users WHERE users.email = $1 LIMIT 1;', [email])
   .then(data => {
-    return data.rows;
+    return data.rows[0];
   });
 };
 
 const getUserWithPassword = (password) => {
-  return db.query('SELECT * FROM users WHERE users.password = $1;', [password])
+  return db.query('SELECT * FROM users WHERE users.password = $1 LIMIT 1;', [password])
   .then(data => {
-    return data.rows;
+    return data.rows[0];
   });
 };
 
@@ -45,7 +45,7 @@ const removeItemFromOrder = (item) => {
 };
 
 const calculateTotalPrice = () => {
-  return db.query('SELECT sum(menu.price), FROM orders JOIN menu ON orders.items = menu.name, GROUP BY menu.price;',)
+  return db.query('SELECT sum(menu.price) FROM orders JOIN menu ON orders.items = menu.name, GROUP BY menu.price;',)
   .then(data => {
     return data.rows;
   });
