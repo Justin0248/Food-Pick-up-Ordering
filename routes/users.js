@@ -55,9 +55,12 @@ res.render('index')
 });
 
 router.get('/order',(req, res) => {
+  
   res.render('thanks')
   });
 
-
+  router.get('/rest',(req, res) => {
+    res.render('restaurant')
+    });
 
 module.exports = router;

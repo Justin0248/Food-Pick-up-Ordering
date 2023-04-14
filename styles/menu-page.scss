@@ -14,3 +14,20 @@
   background-size: cover;
   background-position: center;
 }
+
+
+.appetizers {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+.meals {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+.drinks {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
