@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js",
     "local": "./node_modules/.bin/nodemon -L --ignore public/",
     "db:reset": "node bin/resetdb.js"
@@ -22,6 +22,9 @@
     "twilio": "^3.84.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.10"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.10",
+    "twilio": "^4.10.0"
   }
 }
