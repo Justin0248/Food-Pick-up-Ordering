@@ -32,6 +32,7 @@ router.post('/login',(req, res) => {
       }  
       else {
         res.status(403).send('Error, wrong information provided');
+        return;
       }
     })
   }

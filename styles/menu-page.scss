@@ -1,18 +1,27 @@
-.wrapper {
-	display: grid;
-	grid-template-columns: 1fr 3fr; /* 1:3 ratio */
-}
-.user {
-  color: white;
-  background-color: #35be25;
-}
-.user__avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-image: url("/img/avatar.jpg");
+#my-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("/img/restaurant.jpeg");
   background-size: cover;
-  background-position: center;
+}
+
+#menu-page {
+  min-height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 960px;
+  padding: 120px;
+  opacity: 1;
+}
+
+
+.main-page__greeting {
+  font-family: 'Domine', serif;
+  font-size: 70px;
 }
 
 
@@ -30,4 +39,10 @@
   display: flex;
   flex-direction: column;
   border: 2px solid black;
+}
+
+.add {
+  display: flex;
+  align-items: end;
+  flex-direction: row;
 }
